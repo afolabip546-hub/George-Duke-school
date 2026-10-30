@@ -1,0 +1,1453 @@
+/* =========================================
+   GEORGE & DUKE — RESPONSIVE
+   ========================================= */
+
+
+/* =========================================
+   LARGE TABLETS / SMALL DESKTOPS
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+  :root {
+    --container-padding: 1rem;
+  }
+
+  .site-header__inner {
+    gap: var(--space-4);
+  }
+
+  .site-nav__list {
+    gap: 0;
+  }
+
+  .site-nav__link,
+  .site-nav__dropdown-button {
+    padding-inline: var(--space-2);
+    font-size: 0.84rem;
+  }
+
+  .quick-info__item {
+    padding-inline: var(--space-3);
+  }
+
+  .quick-info__icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__grid {
+    grid-template-columns:
+      1.5fr
+      repeat(3, minmax(0, 1fr));
+
+    gap: var(--space-8);
+  }
+}
+
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  :root {
+    --section-padding-block: 4rem;
+  }
+
+  /* =========================
+     HEADER
+     ========================= */
+
+  .site-header__inner {
+    min-height: 74px;
+  }
+
+  .site-header__logo img {
+    height: 58px;
+    max-width: 170px;
+  }
+
+  .site-header__menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    max-height: calc(100vh - 74px);
+
+    margin-left: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: var(--color-secondary-cream);
+
+    border-top: 1px solid var(--color-border-tint);
+
+    box-shadow: var(--shadow-md);
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .site-nav__list {
+    display: block;
+    width: 100%;
+    padding: var(--space-3);
+  }
+
+  .site-nav__list > li {
+    width: 100%;
+  }
+
+  .site-nav__link,
+  .site-nav__dropdown-button {
+    width: 100%;
+    min-height: 50px;
+
+    justify-content: space-between;
+
+    padding:
+      var(--space-3)
+      var(--space-4);
+
+    border-radius: var(--radius-sm);
+
+    font-size: var(--font-size-base);
+  }
+
+  .site-nav__link[aria-current="page"]::after {
+    right: var(--space-4);
+    bottom: 5px;
+    left: var(--space-4);
+  }
+
+
+  /* =========================
+     MOBILE DROPDOWNS
+     ========================= */
+
+  .site-nav__dropdown {
+    position: static;
+
+    width: 100%;
+    min-width: 0;
+
+    display: none;
+
+    margin-top: var(--space-1);
+
+    padding:
+      var(--space-2)
+      var(--space-2)
+      var(--space-2)
+      var(--space-4);
+
+    background: rgb(255 255 255 / 65%);
+
+    border: 0;
+    border-left: 2px solid var(--color-accent-gold);
+    border-radius: 0;
+
+    box-shadow: none;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: none;
+  }
+
+  .site-nav__item.is-open > .site-nav__dropdown {
+    display: block;
+  }
+
+  .site-nav__dropdown a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 760px;
+  }
+
+
+  /* =========================
+     QUICK INFORMATION
+     ========================= */
+
+  .quick-info__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* =========================
+     ABOUT
+     ========================= */
+
+  .about-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section__image {
+    width: 100%;
+  }
+
+
+  /* =========================
+     SCHOOLS
+     ========================= */
+
+  .schools-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* =========================
+     FEATURES
+     ========================= */
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* =========================
+     RESULTS
+     ========================= */
+
+  .results-section__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+
+  /* =========================
+     STUDENT LIFE
+     ========================= */
+
+  .student-life__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* =========================
+     ADMISSIONS CTA
+     ========================= */
+
+  .admissions-cta__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    min-width: 0;
+
+    gap: var(--space-6);
+  }
+
+  .admissions-cta__content {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .admissions-cta__content h2,
+  .admissions-cta__content .section__title {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .admissions-cta__content p {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .admissions-cta__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    min-width: 0;
+
+    gap: var(--space-3);
+  }
+
+  .admissions-cta__actions .button {
+    width: 100%;
+    max-width: none;
+  }
+
+
+  /* =========================
+     NEWS
+     ========================= */
+
+  .news-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* =========================
+     CAMPUSES
+     ========================= */
+
+  .campuses-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================
+   TABLET / MEDIUM VIEWPORTS (768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner__inner,
+  .about-page-cta__inner,
+  .student-life-cta__inner,
+  .admissions-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-banner__actions,
+  .about-page-cta__actions,
+  .student-life-cta__actions,
+  .admissions-cta__actions {
+    width: 100%;
+  }
+
+  .cta-banner__actions .button,
+  .about-page-cta__actions .button,
+  .student-life-cta__actions .button,
+  .admissions-cta__actions .button {
+    flex: 1 1 200px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  :root {
+    --container-padding: 1rem;
+    --section-padding-block: 3.5rem;
+  }
+.page-hero {
+  min-height: 300px;
+  padding-block: var(--space-12);
+}
+
+.page-hero h1 {
+  font-size: var(--font-size-4xl);
+}
+
+.page-hero p {
+  font-size: var(--font-size-base);
+}
+
+  /* =========================
+     HEADER
+     ========================= */
+
+  .site-header__inner {
+    min-height: 68px;
+  }
+
+  .site-header__logo img {
+    height: 52px;
+    max-width: 155px;
+  }
+
+  .site-header__menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-nav {
+    max-height: calc(100vh - 68px);
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .hero {
+    min-height: 580px;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero__title {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+
+  .hero__description {
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+
+  /* =========================
+     QUICK INFORMATION
+     ========================= */
+
+  .quick-info__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-info__item {
+    width: 100%;
+  }
+
+
+  /* =========================
+     SECTION HEADERS
+     ========================= */
+
+  .section__title {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+
+
+  /* =========================
+     ABOUT
+     ========================= */
+
+  .about-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section__image {
+    min-width: 0;
+    width: 100%;
+  }
+
+
+  /* =========================
+     SCHOOLS
+     ========================= */
+  .schools-section__grid {
+    grid-template-columns:minmax(0,1fr);
+    gap: var(--space-6);
+  }
+
+  .school-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .school-card__image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .student-life-section__grid {
+    grid-template-columns: minmax(0,1fr);
+    gap: var(--space-6);
+  }
+
+  .student-life-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .student-life-card__image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+
+  /* =========================
+     FEATURES
+     ========================= */
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     RESULTS
+     ========================= */
+
+  .results-section__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .results-section__content,
+  .results-section__image {
+    min-width: 0;
+  }
+
+
+  /* =========================
+     STUDENT LIFE
+     ========================= */
+
+  .student-life__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     ADMISSIONS
+     ========================= */
+
+  .admissions-cta__inner {
+    gap: var(--space-5);
+  }
+
+  .admissions-cta__content {
+    width: 100%;
+  }
+
+  .admissions-cta__actions {
+    width: 100%;
+  }
+
+  .admissions-cta__actions .button {
+    width: 100%;
+  }
+
+
+  /* =========================
+     NEWS
+     ========================= */
+
+  .news-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     CAMPUSES
+     ========================= */
+
+  .campuses-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     FINAL CTA
+     ========================= */
+
+  .final-cta__inner {
+    width: 100%;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .site-header__logo img {
+    height: 48px;
+    max-width: 140px;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .quick-info__item {
+    padding-inline: var(--space-3);
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .school-card__content {
+    padding: var(--space-5);
+  }
+}
+
+
+/* =========================================
+   LANDSCAPE PHONES
+   ========================================= */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .site-nav {
+    max-height: calc(100vh - 68px);
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .site-nav,
+  .site-nav__dropdown,
+  .hero *,
+  .school-card *,
+  .news-card *,
+  .campus-card * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+@media (max-width: 640px) {
+
+    .boarding-section {
+        min-height: auto;
+    }
+
+    .boarding-section__overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgb(62 42 32 / 93%),
+                rgb(62 42 32 / 84%)
+            );
+    }
+
+    .boarding-section__content {
+        padding-block: var(--space-12);
+    }
+
+    .boarding-section h2 {
+        font-size: var(--font-size-4xl);
+    }
+}
+@media (max-width: 640px) {
+
+    .athletics-section {
+        min-height: auto;
+    }
+
+    .athletics-section__overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgb(62 42 32 / 93%),
+                rgb(62 42 32 / 84%)
+            );
+    }
+
+    .athletics-section__content {
+        padding-block: var(--space-12);
+    }
+
+    .athletics-section h2 {
+        font-size: var(--font-size-4xl);
+    }
+}
+.student-life-page-main {
+    padding-bottom: var(--space-16);
+}
+
+@media (max-width: 640px) {
+    .student-life-page-main {
+        padding-bottom: var(--space-12);
+    }
+}
+/* Breathing space between Boarding and Athletics */
+.boarding-section {
+    margin-bottom: var(--space-16);
+}
+
+@media (max-width: 640px) {
+    .boarding-section {
+        margin-bottom: var(--space-12);
+    }
+}
+@media (max-width: 1000px) {
+
+    .news-section__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    .admissions-section__content h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .admissions-section__lead {
+        font-size: var(--font-size-base);
+    }
+
+    .admissions-section__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admissions-section__actions .button {
+        width: 100%;
+    }
+
+    .news-section__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        padding: var(--space-6);
+    }
+}
+
+/* Final layout safeguards: use the real homepage class names. */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: max(var(--container-padding), env(safe-area-inset-left));
+}
+
+.schools-section__grid,
+.why-section__grid,
+.student-life-section__grid,
+.news-section__grid,
+.campuses-section__grid {
+  min-width: 0;
+}
+
+.school-card,
+.student-life-card,
+.news-card,
+.campus-card {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .schools-section__grid,
+  .why-section__grid,
+  .student-life-section__grid,
+  .news-section__grid,
+  .campuses-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .results-section__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .schools-section__grid,
+  .why-section__grid,
+  .student-life-section__grid,
+  .news-section__grid,
+  .campuses-section__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .school-card,
+  .student-life-card,
+  .news-card,
+  .campus-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .school-card__content {
+    padding: var(--space-5);
+  }
+
+  .school-card__title,
+  .school-card__content h3,
+  .results-section__content h2 {
+    width: auto;
+    max-width: 100%;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .results-section__content h2 {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    line-height: 1.12;
+  }
+
+  .results-section__content,
+  .results-section__content p,
+  .results-section__image {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .results-section__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .site-footer__main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .results-section__content h2 {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+}
+
+
+/* =========================================
+   GLOBAL ALIGNMENT + DROPDOWN SAFEGUARDS
+   ========================================= */
+
+/* Consistent centred page containers with left-aligned content. */
+.container {
+  width: 100%;
+  max-width: var(--container-width, 1200px);
+  margin-inline: auto;
+  padding-inline: max(var(--container-padding, 1.25rem), env(safe-area-inset-left));
+  padding-right: max(var(--container-padding, 1.25rem), env(safe-area-inset-right));
+}
+
+/* Prevent grid/flex children from forcing horizontal overflow. */
+.site-header__inner,
+.site-footer__grid,
+.site-footer__main,
+.about-section__grid,
+.results-section__inner,
+.schools-grid,
+.features-grid {
+  min-width: 0;
+}
+
+.site-footer__brand,
+.site-footer__column,
+.site-footer__description,
+.site-footer__links,
+.site-footer__contact {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.site-footer__logo {
+  display: block;
+  width: auto;
+  max-width: min(100%, 220px);
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* Keep desktop dropdowns visible above neighbouring sections.
+   Removing the gap prevents the menu closing while the pointer moves into it. */
+.site-header,
+.site-header__inner,
+.site-nav,
+.site-nav__item--dropdown {
+  overflow: visible;
+}
+
+.site-nav__item--dropdown {
+  position: relative;
+}
+
+.site-nav__dropdown {
+  z-index: 1000;
+  top: 100%;
+}
+
+.site-nav__item--dropdown:hover > .site-nav__dropdown,
+.site-nav__item--dropdown:focus-within > .site-nav__dropdown,
+.site-nav__item--dropdown.is-open > .site-nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .site-header,
+  .site-header__inner {
+    overflow: visible;
+  }
+
+  .site-nav {
+    z-index: 1000;
+  }
+
+  .site-nav__dropdown {
+    top: auto;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .site-footer__brand,
+  .site-footer__column {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .site-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .about-section__grid,
+  .results-section__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE POLISH — NAVIGATION, STUDENT LIFE, LEADERSHIP
+   ========================================================= */
+
+/* Keep navigation rows compact and consistent on touch screens. */
+@media (max-width: 900px) {
+  .site-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .site-nav__list > .site-nav__item {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgb(92 64 51 / 14%);
+  }
+
+  .site-nav__list > .site-nav__item:last-child {
+    border-bottom: 0;
+  }
+
+  .site-nav__link,
+  .site-nav__dropdown-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 0.8rem 0.65rem;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  .site-nav__dropdown {
+    margin: 0 0 0.55rem;
+    padding: 0.35rem 0.5rem 0.35rem 0.9rem;
+  }
+
+  .site-nav__dropdown a {
+    min-height: 42px;
+    padding: 0.6rem 0.7rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+}
+
+/* Make the final Student Life call-to-action stack cleanly on phones. */
+@media (max-width: 640px) {
+  .student-life-cta__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: clamp(1.25rem, 5vw, 2rem);
+    text-align: left;
+  }
+
+  .student-life-cta__content {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .student-life-cta__content h2 {
+    font-size: clamp(1.75rem, 7vw, 2.35rem);
+    overflow-wrap: normal;
+  }
+
+  .student-life-cta__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .student-life-cta__actions .button {
+    width: auto;
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  /* Leadership cards use the same width and predictable spacing. */
+  .leadership-section__grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 540px;
+    gap: 1rem;
+    margin-inline: auto;
+  }
+
+  .leadership-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .leadership-card__content {
+    padding: clamp(1.15rem, 4.5vw, 1.75rem);
+  }
+
+  .leadership-card h3 {
+    font-size: clamp(1.45rem, 6vw, 1.9rem);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  .leadership-card__school,
+  .leadership-card__content > p:last-child {
+    overflow-wrap: anywhere;
+  }
+
+  /* Footer logo: constrain the image itself, not just its link. */
+  .site-footer__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .site-footer__brand,
+  .site-footer__column {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .site-footer__logo {
+    display: inline-flex;
+    align-items: flex-start;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  .site-footer__logo img {
+    display: block;
+    width: auto;
+    max-width: min(100%, 170px);
+    height: auto;
+    max-height: 76px;
+    object-fit: contain;
+  }
+
+  .site-footer__column ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .site-footer__column li {
+    margin-block: 0.45rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-nav__list {
+    padding-inline: 0.75rem;
+  }
+
+  .site-nav__link,
+  .site-nav__dropdown-button {
+    padding-inline: 0.55rem;
+  }
+
+  .student-life-cta__actions .button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   QA REFINEMENTS — shared responsive behaviour
+   Keep these rules in the designated responsive stylesheet.
+   ========================================================= */
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+.container,
+.container > *,
+.grid > *,
+[class*="__grid"] > *,
+[class*="__inner"] > * {
+  min-width: 0;
+}
+
+img,
+picture,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.section__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: var(--space-8, 2rem);
+}
+
+.section__action .button {
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    max-height: calc(100dvh - 74px - env(safe-area-inset-top));
+    overscroll-behavior: contain;
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+
+  .site-nav__dropdown {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .site-nav__dropdown a {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container-padding: 1rem;
+    --section-padding-block: 3rem;
+  }
+
+  .section__header {
+    margin-bottom: var(--space-8, 2rem);
+  }
+
+  .section__action {
+    margin-top: var(--space-6, 1.5rem);
+  }
+
+  .section__action .button {
+    margin-inline: auto;
+  }
+
+  .page-hero {
+    padding-block: clamp(2.75rem, 10vw, 4rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    overflow-wrap: break-word;
+  }
+
+  .about-page-story__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-7, 1.75rem);
+  }
+
+  .about-page-story__image img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .leadership-section__grid,
+  .schools-grid,
+  .features-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer__bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE DROPDOWN FIX — reset desktop positioning transforms
+   ========================================================= */
+@media (max-width: 900px) {
+  .site-nav {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav__list {
+    align-items: stretch;
+  }
+
+  .site-nav__item--dropdown {
+    position: static;
+  }
+
+  .site-nav__dropdown,
+  .site-nav__item--dropdown:hover > .site-nav__dropdown,
+  .site-nav__item--dropdown:focus-within > .site-nav__dropdown,
+  .site-nav__item--dropdown.is-open > .site-nav__dropdown {
+    position: static;
+    inset: auto;
+    transform: none;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 0 0.65rem;
+    padding: 0.35rem 0.5rem 0.35rem 0.9rem;
+    background: #fffaf0;
+    border: 0;
+    border-left: 2px solid var(--color-accent-gold, #ffd700);
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .site-nav__dropdown {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .site-nav__item--dropdown.is-open > .site-nav__dropdown {
+    display: block;
+  }
+
+  .site-nav__dropdown li {
+    display: block;
+    width: 100%;
+  }
+
+  .site-nav__dropdown a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.65rem 0.7rem;
+    color: var(--color-dark-brown, #3e2a20);
+    background: transparent;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+}
+
+/* Footer logo sizing: constrain the actual image without distortion. */
+.site-footer__logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 170px);
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.site-footer__logo-link {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Leadership cards: consistent rhythm and balanced text layout. */
+.leadership-section__grid {
+  align-items: stretch;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.leadership-card {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.leadership-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.leadership-card__label {
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--color-accent-gold, #ffd700);
+  letter-spacing: 0.09em;
+}
+
+.leadership-card h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.leadership-card__school {
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .leadership-section__grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 1.1rem;
+  }
+
+  .leadership-card__content {
+    padding: 1.25rem;
+  }
+
+  .site-footer__logo {
+    max-width: 145px;
+    max-height: 64px;
+  }
+}
